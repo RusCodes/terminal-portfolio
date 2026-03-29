@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Terminal</title>
+
+  <!-- Bootstrap (ONLY for layout later) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix-bg" style="display: none;"></canvas>
+
+  <div class="bg-wallpaper"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div id="boot-content"></div>
+  </div>
+
+  <!-- MAIN APP () -->
+<div id="main-app" class="d-none">
+
+  <div class="main-wrapper d-flex justify-content-center align-items-center">
+
+    <div class="terminal-window">
+
+      <!-- HEADER -->
+      <div class="terminal-header d-flex justify-content-between align-items-center">
+        <div class="dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="path">user@portfolio ~ /portfolio</div>
+      </div>
+
+      <!-- BODY -->
+      <div class="terminal-body">
+
+        <h1 class="title">BRETT RUSSEL TORRES</h1>
+
+        <!-- MAIN BOX -->
+        <div class="main-box">
+
+            <div class="main-grid">
+
+                <!-- LEFT -->
+                <div class="left-section text-center">
+                <p class="welcome">Welcome, visitor.</p>
+
+                <img src="your-image.png" class="profile-img" alt ="Profile Image">
+
+                <p class="meta">Aspiring DevOps Engineer • Philippines <br> <br>
+                                 brettrusseltorres@gmail.com
+                </p>
+                
+                </div>
+
+                <!-- RIGHT -->
+                <div class="right-section">
+
+                <div class="top-right">
+                    <h5>Capabilities</h5>
+                    <div class="capabilities">
+                    <p><span>Design</span> Systems, UX/UI, Strategy</p>
+                    <p><span>Build</span> Web, Backend, Automation</p>
+                    <p><span>Ship</span> Scalable, Reliable Systems</p>
+                    </div>
+                </div>
+
+                <div class="bottom-right">
+                    <h5>Navigation</h5>
+                    <p>/about <br> 
+                       /skills <br>
+                       /projects <br>
+                       /certifications <br>
+                       /affiliations <br>
+                       /contact <br>
+                      <span class="fading-text"> ... /help for all commands <br>
+                        Try /theme to change the vibe</span>
+                    </p>
+                </div>
+
+                </div>
+
+            </div>
+
+        </div> 
+
+        <div id="terminal-output"></div>
+
+    </div>
+    <!-- INPUT -->
+          <div class="terminal-console">
+              <div class="terminal-input">
+                  <span>&gt;</span>
+
+                <div class="input-wrapper">
+                <span id="ghost-text"></span>
+          
+                  <input id="command-input" type="text" autocomplete="off" placeholder='Type a command... try "/help"'>
+                </div>
+              </div>
+          </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
