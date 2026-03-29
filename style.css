@@ -407,35 +407,83 @@ html, body {
   
   /* 1. Remove the breathing room so it sits flush to the screen edges */
   .main-wrapper {
-    padding: 0; 
+    padding: 10px;
+    align-items: flex-start; /* Allows the window to start at the top and grow downwards */
+    padding-top: 20px;
   }
 
   /* 2. Full-screen terminal */
   .terminal-window {
     width: 100%;
-    height: 100dvh; /* 100% of the Dynamic Viewport Height */
+    height: auto !important; /* Let it grow based on content */
+    max-height: 60dvh; /* 100% of the Dynamic Viewport Height */
     max-width: 100%; 
-    border-radius: 0; /* Removes the rounded corners for a native app feel */
-    border: none;
+    border-radius: 10px; /* Removes the rounded corners for a native app feel */
+  }
+
+  .terminal-body {
+    padding: 15px; /* Reduces the huge gap between the window edge and the dashed box */
+  }
+
+  .main-box {
+    padding: 10px; /* Tighter padding inside the dashed box */
+    margin-bottom: 5px; /* Brings the input right under the box */
+    border: 1px dashed rgba(255, 255, 255, 0.25) !important;;
   }
 
   /* 3. Stack the content columns vertically */
   .main-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .profile-img {
+    max-width: 135px; /* Shrinks the image so text has room to breathe */
+    margin-bottom: 3px;
   }
 
   /* 4. Adjust the left section border since it's now on top */
   .left-section {
-    border-right: none;
-    border-bottom: 1px dashed #555;
-    padding-bottom: 20px;
-    margin-bottom: 15px;
+    border-right: 1px dashed rgba(255, 255, 255, 0.25) !important;
+    border-bottom: none;
+    padding: 0 8px 0 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .top-right {
+    padding: 0 0 8px 4px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25) !important;
+  }
+
+  .bottom-right {
+    padding: 8px 0 0 4px;
   }
 
   /* 5. Scale down the title slightly so it doesn't wrap awkwardly */
   .title {
-    font-size: 28px;
+    font-size: 20px; 
+    margin-bottom: 15px;
   }
+
+  #command-input,
+  .terminal-input,
+  #ghost-text {
+    font-size: 16px !important;
+  }
+  
+  .terminal-input {
+    height: 45px; /* Slightly slimmer input area to match the compact window */
+  }
+
+ .welcome { font-size: 11px; margin-bottom: 5px; }
+  .meta { font-size: 9px; padding-top: 5px; line-height: 14px; }
+  
+  h5 { font-size: 11px; margin-bottom: 5px; margin-top: 0; }
+  .capabilities p, .bottom-right p { font-size: 9px; line-height: 16px; margin-bottom: 2px; }
+  .fading-text { font-size: 9px; line-height: 14px; display: block; }
 
   .terminal-body a {
   color: #00ff9c;
