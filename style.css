@@ -416,7 +416,7 @@ html, body {
   .terminal-window {
     width: 100%;
     height: auto !important; /* Let it grow based on content */
-    max-height: 60dvh; /* 100% of the Dynamic Viewport Height */
+    max-height: 67dvh; /* 100% of the Dynamic Viewport Height */
     max-width: 100%; 
     border-radius: 10px; /* Removes the rounded corners for a native app feel */
   }
